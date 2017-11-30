@@ -1,0 +1,31 @@
+// GLOBAL VARIABLES
+
+// BORDER RADIUS
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+
+// FULL WIDTH SECTION
+
+@mixin full-width-section{
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+// FLOAT LEFT 100%
+
+@mixin float-100{
+    float: left !important;
+    width: 100% !important;
+}
+
+// FLOAT LEFT 50%
+
+@mixin float-50{
+    float: left !important;
+    width: 50% !important;
+}
