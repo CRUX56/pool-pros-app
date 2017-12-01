@@ -5,21 +5,41 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <!--<script src="https://unpkg.com/vue"></script>-->
-            <script src="js/app.js"></script>
+            <script src="js/app.js" type="text/javascript"></script>
+            <link src="css/style.css" type="text/css"/>
             <title>Pool Pros</title>
         </head>
         <body>
             <div id="app">
                 <header>
                     <div class="top-bar">
-                        <div class="top-links"></div>
+                        <div class="top-links">
+                            <ul>
+                                <li>
+                                    <a href="#">Dealers and Distributors</a>
+                                </li>
+                                <li>
+                                    <a href="#">Commercial Service</a><span></span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="nav-bar">
                         <div class="logo">
-
+                            <a href="#">
+                                <img src="images/pool-pros-logo.png" />
+                            </a>
                         </div>
                         <div class="navigation">
-
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Pools &amp; Spas</a></li>
+                                    <li><a href="#">Supplies</a></li>
+                                    <li><a href="#">Resources</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li id="cta"><a href="#">Find a Pool Pro</a></li>
+                                </ul>
+                            </nav>
                         </div>
                     </div>
                 </header>
@@ -28,20 +48,40 @@
 
                     <!--MAIN CONTENT HERE-->
 
+                    <div class="full-width">
+                        <div class="filter-bar">
+                            <div class="number-of-dealers">
+                                <!--MAKE DYNAMIC-->
+                            </div>
+                            <div class="filter-results">
+                                <!-- WORK TO MAKE DYNAMIC-->
+                            </div>
+                        </div>
+                    </div><!--END FULL WIDTH-->
+
                     <div id="pool-experts"></div>
 
                 </div>
 
-            </div>
-            <!-- TESTING UP AND RUNNING
-            <script>
-                var app = new Vue({
-                    el: '#app',
-                    data: {
-                        message: 'Hello Vue!'
-                    }
-                })
-            </script>
-            -->
+                <!--FOOTER-->
+
+                <footer>
+                    <div class="footer-top">
+                        <div class="footer-logo">
+                            <a href="#">
+                                <img src="images/pool-pros-logo-footer.png" />
+                            </a>
+                        </div>
+                    </div>
+                    <div id="footer-copy">
+                        <div class="footer-legal">
+                            &copy; 2017 Pool Pros | <a href="#">Privacy Policy</a> | <a href="#">Terms and Conditions</a> 
+                        </div>
+                    </div>
+                </footer>
+
+                <!--END FOOTER-->
+
+            </div><!--END #APP-->    
         </body>
     </html>
