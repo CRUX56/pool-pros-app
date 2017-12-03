@@ -1,0 +1,36 @@
+// testing
+/*
+.testing{
+  width: percentage(5/7);
+}*/
+
+body{
+    margin: 0 auto;
+    width: 100%;
+}
+  
+#app{
+   width: 100%;
+   height: auto;
+   margin: 0 auto;
+   background: url('../images/water-background-image.png');
+   background-repeat: no-repeat;
+   background-position: top left;
+}
+
+header{
+  @include full-width;
+  background-color: $white;
+  
+  .top-bar{
+    @include full-width;
+    background-color: $blue;
+
+    .top-links{
+      margin: 0 auto;
+      width: 1170px;
+    }
+
+  }
+
+}

@@ -6,7 +6,7 @@
             <meta http-equiv="X-UA-Compatible" content="ie=edge">
             <!--<script src="https://unpkg.com/vue"></script>-->
             <script src="js/app.js" type="text/javascript"></script>
-            <link src="css/style.css" type="text/css"/>
+            <link rel="stylesheet" href="css/style.css" type="text/css"/>
             <title>Pool Pros</title>
         </head>
         <body>
@@ -23,7 +23,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>
+                    </div><!--END TOP BAR-->
                     <div class="nav-bar">
                         <div class="logo">
                             <a href="#">
@@ -40,7 +40,20 @@
                                     <li id="cta"><a href="#">Find a Pool Pro</a></li>
                                 </ul>
                             </nav>
-                        </div>
+                        </div><!--END NAVIGATION-->
+                        <div class="mobile-navigation">
+                            <!--MOBILE NAVIGATION-->
+                            <h3 id="menu-title">Menu</h3>
+                            <nav>
+                                <ul>
+                                    <li><a href="#">Pools &amp; Spas</a></li>
+                                    <li><a href="#">Supplies</a></li>
+                                    <li><a href="#">Resources</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li id="cta"><a href="#">Find a Pool Pro</a></li>
+                                </ul>
+                            </nav>
+                        </div><!--END MOBILE NAVIGATION-->
                     </div>
                 </header>
 
@@ -59,9 +72,89 @@
                         </div>
                     </div><!--END FULL WIDTH-->
 
-                    <div id="pool-experts"></div>
+                    <div class="full-width">
+                        <div id="pool-experts">
 
-                </div>
+                            <!--FILTERABLE EXPERT CARDS-->
+                            <section></section>
+
+                            <!--TEMPLATE FOR COMPANY CARD-->
+
+                            <div class="pool-company-card">
+                                <div class="company-name">
+                                    <h3>Aqua Experts</h3>
+                                </div>
+                                <div class="company-contact">
+                                    <div class="company-phone">
+                                        <div class="phone">
+                                            <i class="phone-icon"></i>
+                                            <a href="tel:1-888-888-8888">
+                                                1-888-888-8888
+                                            </a>
+                                        </div>
+                                        <div class="content">
+                                            Can't talk now? Click below to send an email.
+                                            <div class="contact-pro-btn">
+                                                <a href="#">
+                                                    <i class="email-icon"></i>Contact this Pro
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div><!--END COMPANY-CONTACT-->
+                                </div><!--END COMPANY CONTACT-->
+                                <div class="business-hours">
+                                    <h4>Business Hours</h4>
+                                    <ul>
+                                        <!--RENDER FROM JAVASCRIPT-->
+                                    </ul>
+                                </div><!--END BUSINESS HOURS-->
+                                <div class="certifications">
+                                    <!--RENDER FROM JAVASCRIPT-->
+                                </div>
+                            </div><!--END POOL COMPANY CARD-->
+
+                        </div><!--END POOL-EXPERTS-->
+                    </div><!--END FULL WIDTH-->
+
+                    <div class="contact-modal">
+                        <div class="title-section">
+                            <span>Email</span>
+                            <h3>Premium Pools &amp; Spas of Charlotte</h3>
+                            <div class="modal-close"></div>
+                        </div>
+                        <div class="modal-body">
+                            <p>Fill out the form below and Premium Pools &amp; Spas of Charlotte will get in touch.</p>
+                            <form>
+                                <label>First and Last Name</label>
+                                <input class="modal-email-input" type="text" />
+                                <label>Phone Number</label>
+                                <input class="modal-email-input" type="text" />
+                                <label>Email address</label>
+                                <input class="modal-email-input" type="email"/>
+                                <label>Comments or Questions</label>
+                                <textarea class="modal-email-textarea"></textarea>
+                                <label>Do you currently own a pool or spa?</label>
+                                <div class="modal-button selected">
+                                    <a href="#">
+                                        <button class="modal-email-button">Yes</button>
+                                    </a>
+                                </div>
+                                <div class="modal-button">
+                                    <a href="#">
+                                        <button class="modal-email-button">No</button>
+                                    </a>
+                                </div>
+                                <submit>
+                                    Send my Email
+                                </submit>
+                            </form>
+                            <div class="disclaimer-text">
+                                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!--END WRAPPER-->
 
                 <!--FOOTER-->
 

@@ -1,4 +1,29 @@
+/*------------- IMPORT GLOBAL MIXINS ----------*/
+/*------------- IMPORT VARIABLES -------------*/
+/*------------- IMPORT APP FRAMEWORK ----------*/
 /*
 .testing{
   width: percentage(5/7);
 }*/
+body {
+  margin: 0 auto;
+  width: 100%; }
+
+#app {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  background: url("../images/water-background-image.png");
+  background-repeat: no-repeat;
+  background-position: top left; }
+
+header {
+  margin: 0 auto !important;
+  padding: 0 !important;
+  width: 100% !important;
+  background-color: #ffffff; }
+  header .top-bar {
+    margin: 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+    background-color: #083d8c; }

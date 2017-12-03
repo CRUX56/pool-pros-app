@@ -2,10 +2,10 @@ window.onload = function () {
    
     // GLOBAL VARIABLES
 
-    var poolExperts = document.querySelector('#pool-experts');
+    var poolExperts = document.querySelector('section');
 
     // CREATE VARIABLE FOR JSON FILE
-    var experts = {
+    var experts = [{
             "zipcode": "28205",
             "location": {
                 "lat": 35.2263714,
@@ -205,80 +205,55 @@ window.onload = function () {
                     }
                 }
             ]
-        };
-       
-        
-        //document.getElementById("pool-experts").innerHTML = dealers.data[1].name;
-        // EXAMPLE console.log(experts.dealers[4].data.certifications);
+        }];
+
+        // PASS JSON DATA TO EXPERTS
 
         var expertObj = JSON.stringify(experts);
 
-        document.getElementById("pool-experts").innerHTML = experts.dealers[4].data.certifications;
+        // LOOP THROUGH DEALERS 
 
-        function poolCard{
+        for ( var i = 0; i < experts.length; i++){
+           
+            //console.log(experts[i].dealers);
 
-           // LOOP THROUGH JSON TO PRODUCE CARDS
+            //Create variables for data that will be pulled into card
 
+           var companyCard = document.createElement("div");
+           var companyName = document.createElement("h3");
+           var companyPhone = document.createElement("a");
+           var companyEmail = document.createElement("a");
+
+           // REFERENCE DATA TO DATA FROM VAR EXPERTS
+
+           companyName.textContent = experts[i].dealers[i].data.name;
+           companyPhone.textContent = experts[i].dealers[i].data.phone1;
+           companyEmail.textContent = experts[i].dealers[i].data.email;
+
+           //GRAB DATA AND APPEND TO CARD
+
+           companyCard.appendChild(companyName);
+           companyCard.appendChild(companyPhone);
+           companyCard.appendChild(companyEmail);
+
+           //Append to div of poolexperts
+
+           poolExperts.appendChild(companyCard);
+           
+        }
+        
+        function numberofCompanies(experts){
+           
         }
 
-        /*TEST OF JSON
-        console.log(dealers.location.lat);
         /*
-    
-
-    //console.log(zipcode);
-
-    //zipcode = JSON.parse(zipcode);
-
-    /*
-    // REQUEST JSON FILE
-
-    var requestURL = "/dealers.json";
-    var request = new XMLHttpRequest();
-
-    request.open('GET', requestURL);
-    request.requestType ='json';
-    request.send();
-    request.onload = function(){
-        var poolCards = request.response;
-        //ADD FUNCTIONS AS NEEDED TO REFERENCE JSON FILE
-        poolCompany(poolCards);
-    }
-
-    // CREATE FUNCTION TO BUILD OUT CARD
-
-    function poolCompany(jsonObj){
-        var dealer = jsonObj['dealers'];
-
-        // ADD VARIABLES FOR EACH SECTION OF THE CARD
-
-        for (var i = 0; i < dealer.length; i++){
-            var card = document.createElement('<div class="dealer-card"></div>');
-            var companyName = document.createElement('h2');
-            var companyPhone = document.createElement('h3');
-            var companyEmail = document.createElement('p');
-            var companyHours = document.createElement('ul');
-
-            companyName.textContent = dealer[i].name;
-            companyPhone.textContent = dealer[i].phone1;
-            companyEmail.textContent = dealer[i].email;
-
-            var hours = dealer[i].weekHours;
-            for (var j = 0; j < hours.length; j++) {
-                var hours = document.createElement('li');
-                listItem.textContent = hours[j];
-                companyHours.appendChild(listItem);
+        for ( var key in experts){
+            if (experts.hasOwnProperty(key)){
+                //console.log(experts[key].dealers);
             }
+        }*/
 
-            card.appendChild(companyName);
-            card.appendChild(companyPhone);
-            card.appendChild(companyEmail);
-            card.appendChild(companyHours);
+        //document.getElementById("pool-experts").innerHTML = experts.dealers[4].data.certifications;
+        // EXAMPLE console.log(experts.dealers[4].data.certifications);
 
-            poolExperts.appendChild(card);
-
-        }
-
-    }*/
-    
 }
